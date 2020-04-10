@@ -34,11 +34,44 @@ class ImagenDiscoDuracion extends StatelessWidget {
 }
 
 class BarraProgreso extends StatelessWidget {
+  final estilo = TextStyle(color: Colors.white.withOpacity(0.4));
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Column(
-        children: <Widget>[Text('00:00')],
+        children: <Widget>[
+          Text(
+            '00:00',
+            style: estilo,
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Stack(
+            children: <Widget>[
+              Container(
+                width: 3,
+                height: 200,
+                color: Colors.white.withOpacity(0.1),
+              ),
+              Positioned(
+                bottom: 0,
+                child: Container(
+                  width: 3,
+                  height: 50,
+                  color: Colors.white.withOpacity(0.8),
+                ),
+              )
+            ],
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Text(
+            '00:00',
+            style: estilo,
+          )
+        ],
       ),
     );
   }
